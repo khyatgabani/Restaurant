@@ -19,7 +19,7 @@
         <title>Restaurant</title>
     </head>
     <body>
-        <header>
+        <header id="scroll">
             <div id="center1">
                 <div id="sec-1-left">
                     <a href id="sec-1-a">
@@ -298,37 +298,37 @@
                 <form action>
                     <div class="sec-6-form">
                         <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Full Name</label>
+                            <label class="sec-6-label">Full Name</label>
                             <input type="text" class="sec-6-input">
                         </div>
                         <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Email</label>
-                            <input type="text" class="sec-6-input">
-                        </div>
-                    </div>
-                    <div class="sec-6-form">
-                        <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Person</label>
-                            <input type="text" class="sec-6-input">
-                        </div>
-                        <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Phone No</label>
+                            <label class="sec-6-label">Email</label>
                             <input type="text" class="sec-6-input">
                         </div>
                     </div>
                     <div class="sec-6-form">
                         <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Date</label>
+                            <label class="sec-6-label">Person</label>
+                            <input type="text" class="sec-6-input">
+                        </div>
+                        <div class="sec-6-inner-form">
+                            <label class="sec-6-label">Phone No</label>
+                            <input type="text" class="sec-6-input">
+                        </div>
+                    </div>
+                    <div class="sec-6-form">
+                        <div class="sec-6-inner-form">
+                            <label class="sec-6-label">Date</label>
                             <input type="date" class="sec-6-input">
                         </div>
                         <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Time</label>
+                            <label class="sec-6-label">Time</label>
                             <input type="time" class="sec-6-input">
                         </div>
                     </div>
                     <div class="sec-6-form">
                         <div class="sec-6-inner-form">
-                            <label for class="sec-6-label">Special Notes</label>
+                            <label class="sec-6-label">Special Notes</label>
                             <textarea name id rows="5"
                                 class="sec-6-textarea"></textarea>
                         </div>
@@ -439,14 +439,68 @@
                 </div>
                 <div class="tops">
                     <h4 class="foot-h4">Facebook Like</h4>
-                    <img src="../../Assignments/Template (Restaurant)/images/facebook_like.jpg" alt="">
+                    <img
+                        src="../../Assignments/Template (Restaurant)/images/facebook_like.jpg"
+                        alt>
                 </div>
             </div>
             <div id="footbottom">
                 <div id="centerfoot">
-                    <p class="foot-p-bot">Copyright © <a class="foot-a-bot" href="index.html">Restaurant</a>. All rights reserved.</p>
+                    <p class="foot-p-bot">Copyright © <a class="foot-a-bot"
+                            href="index.html">Restaurant</a>. All rights
+                        reserved.</p>
                 </div>
             </div>
         </footer>
+
+        <div class="scrolltop">
+            <a href="#" id="top">
+                <i class="fas fa-level-up-alt scroll-i"></i>
+            </a>
+        </div>
+
+        <div class="container" id="showtheme">
+            <i class="fa fa-cog fa-2x contain-i"></i>
+        </div>
+
+        <div class="" id="themes">
+            <h3>Select theme color</h3>
+            <div class="theme-in">
+                <div class="colors" id="color1"></div>
+                <div class="colors" id="color2"></div>
+                <div class="colors" id="color3"></div>
+                <div class="colors" id="color4"></div>
+            </div>
+        </div>
+
+        <script>
+            let scrolltotop = document.getElementById("top");
+            // console.log(scrolltotop);
+            window.addEventListener("scroll",()=>{
+                if(window.pageYOffset > 500)
+                {
+                    scrolltotop.style.display = "block";
+                }
+                else if(window.pageYOffset < 500){
+                    scrolltotop.style.display = "none";
+                }
+            });
+
+            // scrolltotop.addEventListener("click",()=>{
+            //     let h1 = document.getElementById("scroll");
+            //     let getid = h1.getAttribute("id");
+            //     // console.log(getid);
+            //     scrolltotop.setAttribute("href","#"+getid);
+            // });
+
+
+            let showtheme = document.getElementById("showtheme");
+            let theme = document.getElementById("themes");
+
+            showtheme.addEventListener("click",()=>{
+                theme.classList.toggle("theme");
+            });
+
+        </script>
     </body>
 </html>
